@@ -38,8 +38,9 @@ app.get("/tennis/players/:name", (req, res) => {
         .catch(err => res.status(500).json("error in fetching player data"));
 });
 
-app.post("/tennis/players", (req, res) => {
-    const {name, turned_pro, plays, country, grand_slams, career_high} = req.body;
+app.post("/tennis/players/:name", (req, res) => {
+    let {name} = req.params;
+    const {turned_pro, plays, country, grand_slams, career_high} = req.body;
 
     db("players").insert({
         name, turned_pro, plays, country, grand_slams, career_high
@@ -59,8 +60,6 @@ app.put("/tennis/players/:name", (req, res) => {
     name = name.replace(/_/g, " "); 
     const { turned_pro, plays, country, grand_slams, career_high } = req.body;
 
-
-
     db("players").where("name", "=", name).update({
         name, turned_pro, plays, country, grand_slams, career_high
     })
@@ -73,7 +72,22 @@ app.put("/tennis/players/:name", (req, res) => {
             }
         })
         .catch(err => res.status(500).json("error updating player data"));
-})
+});
 
+app.delete("/tennis/players/:name", (req, res) => {
+    let {name} = req.params; 
+    name = name.replace(/_/g, " ");
+
+    db("players").where("name", "=", name).del()
+        .returning("*")
+        .then(data => {
+            if (data[0]) {
+                res.json(data[0]);
+            } else {
+                res.status(400).json("no such player exists");
+            }
+        })
+        .catch(err => res.status(500).json("error deleting player data"));
+});
 
 app.listen(3001);
