@@ -1,6 +1,8 @@
 const getInstructions = (req, res) => {
     res.send(`
-    Welcome to the HotShot Tennis API!
+    Welcome to the HotShot Tennis API! For instructions on how to use this API
+    check out the GitHub repository at this URL: 
+    https://github.com/asathiya007/hotshot-tennis-api
     \n\n
     This API provides you with data about your favorite tennis players, 
     such as their name, their playing style, the year they turned pro, the 
