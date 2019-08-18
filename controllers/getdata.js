@@ -111,6 +111,10 @@ const getInstructions = (req, res) => {
         "grand_slams": 20,
         "career_high": 1
     }
+
+    Good luck with your project, use this API and ace it!
+
+    - Akshay Sathiya, developer of HotShot Tennis API
     `);
 }
 
