@@ -1,5 +1,5 @@
 const getInstructions = (req, res) => {
-    res.send(`
+    res.json(`
     Welcome to the HotShot Tennis API! For instructions on how to use this API
     check out the GitHub repository at this URL: 
     https://github.com/asathiya007/hotshot-tennis-api
