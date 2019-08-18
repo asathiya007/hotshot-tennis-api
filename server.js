@@ -40,10 +40,11 @@ app.get("/tennis/players/:name", (req, res) => {
 
 app.post("/tennis/players/:name", (req, res) => {
     let {name} = req.params;
-    const {turned_pro, plays, country, grand_slams, career_high} = req.body;
+    name = name.replace(/_/g, " ");
+    const {turned_pro, plays, country, racquet, grand_slams, career_high} = req.body;
 
     db("players").insert({
-        name, turned_pro, plays, country, grand_slams, career_high
+        name, turned_pro, plays, country, racquet, grand_slams, career_high
     })
         .returning("*")
         .then(data => {
@@ -58,10 +59,10 @@ app.post("/tennis/players/:name", (req, res) => {
 app.put("/tennis/players/:name", (req, res) => {
     let {name} = req.params;
     name = name.replace(/_/g, " "); 
-    const { turned_pro, plays, country, grand_slams, career_high } = req.body;
+    const { turned_pro, plays, country, racquet, grand_slams, career_high } = req.body;
 
     db("players").where("name", "=", name).update({
-        name, turned_pro, plays, country, grand_slams, career_high
+        name, turned_pro, plays, country, racquet, grand_slams, career_high
     })
         .returning("*")
         .then(data => {
