@@ -3,6 +3,11 @@ const cors = require("cors");
 const knex = require("knex");
 const bodyParser = require("body-parser");
 
+const getData = require("./controllers/getdata");
+const addData = require("./controllers/adddata");
+const updateData = require("./controllers/updatedata");
+const deleteData = require("./controllers/deletedata");
+
 const app = express(); 
 app.use(cors());
 app.use(bodyParser.json());
@@ -17,78 +22,31 @@ const db = knex({
     }
 }); 
 
+// endpoint - get all players data
 app.get("/tennis/players", (req, res) => {
-    db.select("*").from("players")
-        .then(data => res.json(data))
-        .catch(err => res.status(500).json("error in fetching players data"));
+    getData.getPlayers(req, res, db);
 }); 
 
+// endpoint - get specific player data
 app.get("/tennis/players/:name", (req, res) => {
-    let {name} = req.params;
-    name = name.replace(/_/g, " "); 
-
-    db.select("*").from("players").where("name", "=", name)
-        .then(data => {
-            if (data[0]) {
-                res.json(data[0]);
-            } else {
-                res.status(400).json("no such player exists in the database");
-            }
-        })
-        .catch(err => res.status(500).json("error in fetching player data"));
+    getData.getPlayer(req, res, db);
 });
 
+// endpoint - add new player data
 app.post("/tennis/players/:name", (req, res) => {
-    let {name} = req.params;
-    name = name.replace(/_/g, " ");
-    const {turned_pro, plays, country, racquet, grand_slams, career_high} = req.body;
-
-    db("players").insert({
-        name, turned_pro, plays, country, racquet, grand_slams, career_high
-    })
-        .returning("*")
-        .then(data => {
-            if (data[0]) {
-                res.json(data[0]);
-            } else {
-                res.status(500).json("error in adding new player data");
-            }
-        });
+    addData.addPlayer(req, res, db);
 });
 
+// endpoint - edit existing player data
 app.put("/tennis/players/:name", (req, res) => {
-    let {name} = req.params;
-    name = name.replace(/_/g, " "); 
-    const { turned_pro, plays, country, racquet, grand_slams, career_high } = req.body;
-
-    db("players").where("name", "=", name).update({
-        name, turned_pro, plays, country, racquet, grand_slams, career_high
-    })
-        .returning("*")
-        .then(data => {
-            if (data[0]) {
-                res.json(data[0]);
-            } else {
-                res.status(400).json("no such player exists");
-            }
-        })
-        .catch(err => res.status(500).json("error updating player data"));
+    updateData.updatePlayer(req, res, db);
 });
 
+// endpoint - delete player data
 app.delete("/tennis/players/:name", (req, res) => {
-    let {name} = req.params; 
-    name = name.replace(/_/g, " ");
-
-    db("players").where("name", "=", name).del()
-        .returning("*")
-        .then(data => {
-            if (data[0]) {
-                res.json(data[0]);
-            } else {
-                res.status(400).json("no such player exists");
-            }
-        })
-        .catch(err => res.status(500).json("error deleting player data"));
+    deleteData.deletePlayer(req, res, db);
 });
 
-app.listen(3001);
+app.listen(process.env.PORT || 8080, () => {
+    console.log(`server is up and running`);
+});
