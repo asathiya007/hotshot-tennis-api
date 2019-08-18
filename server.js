@@ -48,5 +48,5 @@ app.delete("/tennis/players/:name", (req, res) => {
 });
 
 app.listen(process.env.PORT || 8080, () => {
-    console.log(`server is up and running`);
+    console.log("server is up and running");
 });
