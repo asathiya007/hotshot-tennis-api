@@ -27,6 +27,11 @@ const db = knex({
     }
 }); 
 
+// endpoint - starting display 
+app.get("/", (req, res) => {
+    getData.getInstructions(req, res);
+})
+
 // endpoint - get all players data
 app.get("/tennis/players", (req, res) => {
     getData.getPlayers(req, res, db);
