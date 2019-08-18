@@ -15,10 +15,15 @@ app.use(bodyParser.json());
 const db = knex({
     client: "pg",
     connection: {
-        host: '127.0.0.1',
-        user: '',
-        password: '',
-        database: 'hotshot-tennis'
+        // for local use and testing 
+        // host: '127.0.0.1',
+        // user: '',
+        // password: '',
+        // database: 'hotshot-tennis'
+
+        // for heroku deployment 
+        connectionString: process.env.DATABASE_URL,
+        ssl: true
     }
 }); 
 
