@@ -1,5 +1,5 @@
 const getInstructions = (req, res) => {
-    res.json(`
+    res.send(`
     Welcome to the HotShot Tennis API!
 
     This API provides you with data about your favorite tennis players, 
