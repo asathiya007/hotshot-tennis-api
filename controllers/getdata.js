@@ -1,7 +1,7 @@
 const getInstructions = (req, res) => {
     res.send(`
     Welcome to the HotShot Tennis API!
-
+    \n\n
     This API provides you with data about your favorite tennis players, 
     such as their name, their playing style, the year they turned pro, the 
     racquet they use, the number of grand slam titles they won, etc. 
