@@ -3,10 +3,10 @@ const cors = require("cors");
 const knex = require("knex");
 const bodyParser = require("body-parser");
 
-const getData = require("./controllers/getdata");
-const addData = require("./controllers/adddata");
-const updateData = require("./controllers/updatedata");
-const deleteData = require("./controllers/deletedata");
+const getData = require("./controllers/getdata/getdata");
+const addData = require("./controllers/adddata/adddata");
+const updateData = require("./controllers/updatedata/updatedata");
+const deleteData = require("./controllers/deletedata/deletedata");
 
 const app = express(); 
 app.use(cors());
