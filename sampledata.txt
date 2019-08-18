@@ -1,0 +1,135 @@
+{
+    "name": "Roger Federer",
+    "turned_pro": "1998",
+    "plays": "Right-handed, one-handed backhand",
+    "country": "Switzerland",
+    "racquet": "Wilson Pro Staff RF 97 Autograph",
+    "grand_slams": 20,
+    "career_high": 1
+},
+{
+    "name": "Rafael Nadal",
+    "turned_pro": "2001",
+    "plays": "Left-handed, two-handed backhand",
+    "country": "Spain",
+    "racquet": "Babolat Pure Aero",
+    "grand_slams": 18,
+    "career_high": 1
+},
+{
+    "name": "Novak Djokovic",
+    "turned_pro": "2003",
+    "plays": "Right-handed, two-handed backhand",
+    "country": "Serbia",
+    "racquet": "Head Graphene 360 Speed Pro",
+    "grand_slams": 16,
+    "career_high": 1
+},
+{
+    "name": "Andy Murray",
+    "turned_pro": "2005",
+    "plays": "Right-handed, two-handed backhand",
+    "country": "United Kingdom",
+    "racquet": "Head PT57A Graphene XT Radical Pro",
+    "grand_slams": 3,
+    "career_high": 1
+},
+{
+    "name": "Stanislas Wawrinka",
+    "turned_pro": "2002",
+    "plays": "Right-handed, one-handed backhand",
+    "country": "Switzerland",
+    "racquet": "Yonex VCORE Pro 97 330",
+    "grand_slams": 3,
+    "career_high": 3
+},
+{
+    "name": "Serena Williams",
+    "turned_pro": "1995",
+    "plays": "Right-handed, two-handed backhand",
+    "country": "United States",
+    "racquet": "Wilson Blade SW104",
+    "grand_slams": 23,
+    "career_high": 1
+},
+{
+    "name": "Venus Williams",
+    "turned_pro": "1994",
+    "plays": "Right-handed, two-handed backhand",
+    "country": "United States",
+    "racquet": "Wilson Blade 104",
+    "grand_slams": 7,
+    "career_high": 1
+},
+{
+    "name": "Maria Sharapova",
+    "turned_pro": "2001",
+    "plays": "Right-handed, two-handed backhand",
+    "country": "Russia",
+    "racquet": "Head Graphene XT Instinct MP",
+    "grand_slams": 5,
+    "career_high": 1
+},
+{
+    "name": "Simona Halep",
+    "turned_pro": "2006",
+    "plays": "Right-handed, two-handed backhand",
+    "country": "Romania",
+    "racquet": "Wilson Blade 98",
+    "grand_slams": 2,
+    "career_high": 1
+},
+{
+    "name": "Naomi Osaka",
+    "turned_pro": "2013",
+    "plays": "Right-handed, two-handed backhand",
+    "country": "Japan",
+    "racquet": "Yonex Limited Edition EZONE 98 (305g) Gold",
+    "grand_slams": 2,
+    "career_high": 1
+},
+{
+    "name": "Dominic Thiem",
+    "turned_pro": "2011",
+    "plays": "Right-handed, one-handed backhand",
+    "country": "Austria",
+    "racquet": "Babolat Pure Strike 98",
+    "grand_slams": 0,
+    "career_high": 3
+},
+{
+    "name": "Alexander Zverev",
+    "turned_pro": "2013",
+    "plays": "Right-handed, two-handed backhand",
+    "country": "Germany",
+    "racquet": "HEAD Graphene Touch Speed Pro",
+    "grand_slams": 0,
+    "career_high": 3
+},
+{
+    "name": "Nick Kyrgios",
+    "turned_pro": "2013",
+    "plays": "Right-handed, two-handed backhand",
+    "country": "Australia",
+    "racquet": "Yonex Xi 98",
+    "grand_slams": 0,
+    "career_high": 68
+},
+{
+    "name": "Stefanos Tsitsipas",
+    "turned_pro": "2016",
+    "plays": "Right-handed, one-handed backhand",
+    "country": "Greece",
+    "racquet": "Wilson Blade 98",
+    "grand_slams": 0,
+    "career_high": 5
+},
+{
+    "name": "Felix Auger-Aliassime",
+    "turned_pro": "2017",
+    "plays": "Right-handed, two-handed backhand",
+    "country": "Canada",
+    "racquet": "Babolat Pure Aero VS",
+    "grand_slams": 0,
+    "career_high": 21
+}
