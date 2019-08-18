@@ -110,6 +110,9 @@ Response - a JSON object containing the removed player data.
     "career_high": 1
 }
 
-Good luck with your project, use this API and ace it!
+For more info, check out the GitHub repository at this URL: 
+https://github.com/asathiya007/hotshot-tennis-api
+
+Good luck with your project, use HotShot Tennis API and ace it!
 
 - Akshay Sathiya, developer of HotShot Tennis API
