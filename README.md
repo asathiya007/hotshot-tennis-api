@@ -1,4 +1,4 @@
-Welcome to the HotShot Tennis API!
+Welcome to HotShot Tennis API!
 
 This API provides you with data about your favorite tennis players, 
 such as their name, their playing style, the year they turned pro, the 
